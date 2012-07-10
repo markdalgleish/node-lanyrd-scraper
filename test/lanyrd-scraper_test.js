@@ -121,6 +121,13 @@ exports['multi-day event'] = {
 		test.equal(multiDayEventData.attendees[15].name, 'Mark Dalgleish');
 		test.equal(multiDayEventData.attendees[15].twitterHandle, '@markdalgleish');
 		test.done();
+	},
+	'has trackers': function(test) {
+		test.expect(3);
+		test.equal(multiDayEventData.trackers.length, 25);
+		test.equal(multiDayEventData.trackers[0].name, 'Paul Irish ◕‿◕');
+		test.equal(multiDayEventData.trackers[0].twitterHandle, '@paul_irish');
+		test.done();
 	}
 };
 
