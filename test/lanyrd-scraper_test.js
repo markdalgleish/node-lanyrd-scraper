@@ -147,4 +147,4 @@ exports['resolveUrl'] = {
 		test.equal(lanyrd.resolveUrl('/2012/web-directions-code'), EVENT_URL);
 		test.done();
 	}
-}
+};
