@@ -99,19 +99,21 @@ exports['multi-day event'] = {
 		test.done();
 	},
 	'has speakers': function(test) {
-		test.expect(4);
+		test.expect(5);
 		test.equal(multiDayEventData.speakers.length, 19);
 		test.equal(multiDayEventData.speakers[15].name, 'Mark Dalgleish');
 		test.equal(multiDayEventData.speakers[15].twitterHandle, '@markdalgleish');
+		test.equal(multiDayEventData.speakers[11].name, 'Anette Bergo', 'supports speakers without Twitter handles');
 		test.equal(multiDayEventData.speakers[11].twitterHandle, undefined, 'supports speakers without Twitter handles');
 		test.done();
 	},
 	'has sessions': function(test) {
-		test.expect(5);
+		test.expect(6);
 		test.equal(multiDayEventData.sessions.length, 20);
 		test.equal(multiDayEventData.sessions[14].title, 'JavaScript: Getting Closure');
 		test.equal(multiDayEventData.sessions[14].speakerName, 'Mark Dalgleish');
 		test.equal(multiDayEventData.sessions[14].speakerTwitterHandle, '@markdalgleish');
+		test.equal(multiDayEventData.sessions[18].speakerName, 'Anette Bergo', 'supports speakers without Twitter handles');
 		test.equal(multiDayEventData.sessions[18].speakerTwitterHandle, undefined, 'supports speakers without Twitter handles');
 		test.done();
 	},
