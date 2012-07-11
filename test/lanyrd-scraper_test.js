@@ -72,9 +72,10 @@ exports['multi-day event'] = {
 		test.done();
 	},
 	'has venue': function(test) {
-		test.expect(3);
+		test.expect(4);
 		test.equal(multiDayEventData.venue.name, 'The RACV City Club');
 		test.equal(multiDayEventData.venue.address, '501 Bourke St, Melbourne, 3000');
+		test.equal(multiDayEventData.venue.note, 'Enter through the front door - you\'ll see where to go');
 		test.equal(multiDayEventData.venue.googleMapsUrl, 'http://maps.google.com/maps?q=-37.8154734594,144.959473427+(The RACV City Club)');
 		test.done();
 	},
