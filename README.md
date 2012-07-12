@@ -7,6 +7,7 @@ Install the module with: `npm install https://github.com/markdalgleish/node-lany
 
 ```javascript
 var lanyrd = require('lanyrd-scraper');
+
 lanyrd.scrape('2012/web-directions-code', function(err, data){
 	console.log(data); // Object containing event info.
 });
