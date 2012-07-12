@@ -109,14 +109,28 @@ exports['multi-day event'] = {
 		test.done();
 	},
 	'has sessions': function(test) {
-		test.expect(7);
+		test.expect(2);
 		test.equal(multiDayEventData.sessions.length, 20);
 		test.equal(multiDayEventData.sessions[14].title, 'JavaScript: Getting Closure');
+		test.done();
+	},
+	'session has speaker details': function(test) {
+		test.expect(2);
 		test.equal(multiDayEventData.sessions[14].speakers.length, 1);
 		test.equal(multiDayEventData.sessions[14].speakers[0].name, 'Mark Dalgleish');
+		test.done();
+	},
+	'session supports speakers without twitter handles': function(test) {
+		test.expect(3);
 		test.equal(multiDayEventData.sessions[14].speakers[0].twitterHandle, '@markdalgleish');
 		test.equal(multiDayEventData.sessions[18].speakers[0].name, 'Anette Bergo', 'supports speakers without Twitter handles');
 		test.equal(multiDayEventData.sessions[18].speakers[0].twitterHandle, undefined, 'supports speakers without Twitter handles');
+		test.done();
+	},
+	'session doesnt require speakers': function(test) {
+		test.expect(2);
+		test.equal(multiDayEventData.sessions[10].title, 'Clientside templates for reactive UI');
+		test.equal(multiDayEventData.sessions[10].speakers.length, 0);
 		test.done();
 	},
 	'has attendees': function(test) {
