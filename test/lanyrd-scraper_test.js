@@ -120,6 +120,17 @@ exports['multi-day event'] = {
 		test.equal(multiDayEventData.sessions[14].speakers[0].name, 'Mark Dalgleish');
 		test.done();
 	},
+	'session supports start time': function(test) {
+		test.expect(2);
+		test.equal(multiDayEventData.sessions[9].title, 'Getting Touchy Feely with the Web');
+		test.equal(multiDayEventData.sessions[9].startTime, '1:20pm');
+		test.done();
+	},
+	'session doesnt require start time': function(test) {
+		test.expect(1);
+		test.equal(multiDayEventData.sessions[10].startTime, undefined);
+		test.done();
+	},
 	'session supports multiple speakers': function(test) {
 		test.expect(5);
 		test.equal(multiDayEventData.sessions[15].speakers.length, 2);
