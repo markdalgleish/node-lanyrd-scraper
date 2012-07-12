@@ -109,9 +109,10 @@ exports['multi-day event'] = {
 		test.done();
 	},
 	'has sessions': function(test) {
-		test.expect(2);
+		test.expect(3);
 		test.equal(multiDayEventData.sessions.length, 20);
 		test.equal(multiDayEventData.sessions[14].title, 'JavaScript: Getting Closure');
+		test.equal(multiDayEventData.sessions[14].url, 'http://lanyrd.com/2012/web-directions-code/swmwz/');
 		test.done();
 	},
 	'session has speaker details': function(test) {
