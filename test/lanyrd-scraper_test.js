@@ -25,10 +25,10 @@ var app = express.createServer();
 var PORT = 8535;
 
 app.configure(function(){
-    app.use(express.methodOverride());
-    app.use(express.bodyParser());
-    app.use(app.router);
-    app.use(express['static'](__dirname + '/mock-pages'));
+	app.use(express.methodOverride());
+	app.use(express.bodyParser());
+	app.use(app.router);
+	app.use(express['static'](__dirname + '/mock-pages'));
 });
 
 app.listen(PORT);
@@ -118,6 +118,15 @@ exports['multi-day event'] = {
 		test.expect(2);
 		test.equal(multiDayEventData.sessions[14].speakers.length, 1);
 		test.equal(multiDayEventData.sessions[14].speakers[0].name, 'Mark Dalgleish');
+		test.done();
+	},
+	'session supports multiple speakers': function(test) {
+		test.expect(5);
+		test.equal(multiDayEventData.sessions[15].speakers.length, 2);
+		test.equal(multiDayEventData.sessions[15].speakers[0].name, 'Jed Schmidt');
+		test.equal(multiDayEventData.sessions[15].speakers[0].twitterHandle, '@jedschmidt');
+		test.equal(multiDayEventData.sessions[15].speakers[1].name, 'Dinkumiser');
+		test.equal(multiDayEventData.sessions[15].speakers[1].twitterHandle, '@dinkumiser');
 		test.done();
 	},
 	'session supports speakers without twitter handles': function(test) {
