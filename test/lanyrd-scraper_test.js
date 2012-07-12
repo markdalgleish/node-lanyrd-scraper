@@ -169,18 +169,3 @@ exports['multi-day event'] = {
 		test.done();
 	}
 };
-
-var EVENT_URL = 'http://lanyrd.com/2012/web-directions-code';
-exports['resolveUrl'] = {
-	'ignores complete url': function(test) {
-		test.expect(1);
-		test.equal(lanyrd.resolveUrl(EVENT_URL), EVENT_URL);
-		test.done();
-	},
-	'resolves urls correctly': function(test) {
-		test.expect(2);
-		test.equal(lanyrd.resolveUrl('2012/web-directions-code'), EVENT_URL);
-		test.equal(lanyrd.resolveUrl('/2012/web-directions-code'), EVENT_URL);
-		test.done();
-	}
-};
