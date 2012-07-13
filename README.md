@@ -2,13 +2,11 @@
 
 Lanyrd event scraper for Node.js [![Build Status](https://secure.travis-ci.org/markdalgleish/node-lanyrd-scraper.png)](http://travis-ci.org/markdalgleish/node-lanyrd-scraper)
 
-## Installation
+## Getting Started
 
 Install the module with: `npm install lanyrd-scraper`
 
 Or install the latest version from GitHub with: `npm install https://github.com/markdalgleish/node-lanyrd-scraper/tarball/master`
-
-## Getting Started
 
 ```javascript
 var lanyrd = require('lanyrd-scraper');
