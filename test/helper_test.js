@@ -103,3 +103,13 @@ exports['getTwitterHandle'] = {
 		test.done();
 	}
 };
+
+var HASHTAG = 'melbjs',
+	$getHashtagContent = $('<div><div id="hashtag">' + HASHTAG + '</div></div>');
+exports['getHashTag'] = {
+	'returns the hash tag': function(test) {
+		test.expect(1);
+		test.equal(helper.getHashtag($getHashtagContent.find('#hashtag')), HASHTAG);
+		test.done();
+	}
+};

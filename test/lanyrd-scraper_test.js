@@ -92,7 +92,7 @@ exports['multi-day event'] = {
 	},
 	'has hashtag': function(test) {
 		test.expect(1);
-		test.equal(multiDayEventData.hashtag, '#wdc12');
+		test.equal(multiDayEventData.hashtag, 'wdc12');
 		test.done();
 	},
 	'has Twitter account': function(test) {
