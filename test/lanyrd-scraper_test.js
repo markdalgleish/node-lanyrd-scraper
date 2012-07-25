@@ -53,6 +53,13 @@ exports['multi-day event'] = {
 			test.done();
 		});
 	},
+	'returns an error if event is not found': function(test) {
+		test.expect(1);
+		lanyrd.scrape('http://localhost:' + PORT + '/404.html', function(err, res){
+			test.equal(err.message, 'Event not found');
+			test.done();
+		});
+	},
 	'has title': function(test) {
 		test.expect(1);
 		test.equal(multiDayEventData.title, 'Web Directions Code');
