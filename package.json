@@ -16,7 +16,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/markdalgleish/node-lanyrd-scraper/blob/master/LICENSE-MIT"
+      "url": "http://markdalgleish.mit-license.org"
     }
   ],
   "main": "lib/lanyrd-scraper",
