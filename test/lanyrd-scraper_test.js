@@ -46,6 +46,13 @@ exports['multi-day event'] = {
 			done();
 		});
 	},
+	'returns an error if page content is invalid': function(test) {
+		test.expect(1);
+		lanyrd.scrape('http://localhost:' + PORT + '/invalid-page.html', function(err, res){
+			test.equal(err.message, 'Invalid page format');
+			test.done();
+		});
+	},
 	'has title': function(test) {
 		test.expect(1);
 		test.equal(multiDayEventData.title, 'Web Directions Code');
