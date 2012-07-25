@@ -97,14 +97,14 @@ exports['multi-day event'] = {
 	},
 	'has Twitter account': function(test) {
 		test.expect(1);
-		test.equal(multiDayEventData.twitterHandle, '@webdirections');
+		test.equal(multiDayEventData.twitterHandle, 'webdirections');
 		test.done();
 	},
 	'has speakers': function(test) {
 		test.expect(5);
 		test.equal(multiDayEventData.speakers.length, 19);
 		test.equal(multiDayEventData.speakers[15].name, 'Mark Dalgleish');
-		test.equal(multiDayEventData.speakers[15].twitterHandle, '@markdalgleish');
+		test.equal(multiDayEventData.speakers[15].twitterHandle, 'markdalgleish');
 		test.equal(multiDayEventData.speakers[11].name, 'Anette Bergo', 'supports speakers without Twitter handles');
 		test.equal(multiDayEventData.speakers[11].twitterHandle, undefined, 'supports speakers without Twitter handles');
 		test.done();
@@ -137,14 +137,14 @@ exports['multi-day event'] = {
 		test.expect(5);
 		test.equal(multiDayEventData.sessions[15].speakers.length, 2);
 		test.equal(multiDayEventData.sessions[15].speakers[0].name, 'Jed Schmidt');
-		test.equal(multiDayEventData.sessions[15].speakers[0].twitterHandle, '@jedschmidt');
+		test.equal(multiDayEventData.sessions[15].speakers[0].twitterHandle, 'jedschmidt');
 		test.equal(multiDayEventData.sessions[15].speakers[1].name, 'Dinkumiser');
-		test.equal(multiDayEventData.sessions[15].speakers[1].twitterHandle, '@dinkumiser');
+		test.equal(multiDayEventData.sessions[15].speakers[1].twitterHandle, 'dinkumiser');
 		test.done();
 	},
 	'session supports speakers without twitter handles': function(test) {
 		test.expect(3);
-		test.equal(multiDayEventData.sessions[14].speakers[0].twitterHandle, '@markdalgleish');
+		test.equal(multiDayEventData.sessions[14].speakers[0].twitterHandle, 'markdalgleish');
 		test.equal(multiDayEventData.sessions[18].speakers[0].name, 'Anette Bergo', 'supports speakers without Twitter handles');
 		test.equal(multiDayEventData.sessions[18].speakers[0].twitterHandle, undefined, 'supports speakers without Twitter handles');
 		test.done();
@@ -159,14 +159,14 @@ exports['multi-day event'] = {
 		test.expect(3);
 		test.equal(multiDayEventData.attendees.length, 27);
 		test.equal(multiDayEventData.attendees[15].name, 'Mark Dalgleish');
-		test.equal(multiDayEventData.attendees[15].twitterHandle, '@markdalgleish');
+		test.equal(multiDayEventData.attendees[15].twitterHandle, 'markdalgleish');
 		test.done();
 	},
 	'has trackers': function(test) {
 		test.expect(3);
 		test.equal(multiDayEventData.trackers.length, 25);
 		test.equal(multiDayEventData.trackers[0].name, 'Paul Irish ◕‿◕');
-		test.equal(multiDayEventData.trackers[0].twitterHandle, '@paul_irish');
+		test.equal(multiDayEventData.trackers[0].twitterHandle, 'paul_irish');
 		test.done();
 	}
 };

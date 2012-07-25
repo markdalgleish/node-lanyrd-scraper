@@ -94,8 +94,8 @@ exports['getTitle'] = {
 	}
 };
 
-var TWITTER_HANDLE = '@markdalgleish',
-	$getTwitterHandleContent = $('<div><a id="twitter-handle" href="/profile/' + TWITTER_HANDLE.replace('@','') + '" /></div>');
+var TWITTER_HANDLE = 'markdalgleish',
+	$getTwitterHandleContent = $('<div><a id="twitter-handle" href="/profile/' + TWITTER_HANDLE + '" /></div>');
 exports['getTwitterHandle'] = {
 	'returns the Twitter handle': function(test) {
 		test.expect(1);
