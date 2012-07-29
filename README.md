@@ -1,10 +1,10 @@
 # lanyrd-scraper [![Build Status](https://secure.travis-ci.org/markdalgleish/node-lanyrd-scraper.png)](http://travis-ci.org/markdalgleish/node-lanyrd-scraper)
 
-Lanyrd event scraper for Node.js.
+[Lanyrd](http://lanyrd.com) event scraper for Node.js.
 
 ### Why a Scraper?
 
-Lanyrd doesn't have an API (yet).
+They don't have an API (yet).
 
 ## Setup
 
@@ -80,9 +80,10 @@ The following properties are available on the returned `event` object:
       'twitterHandle': String
     }
   ]
+}
 ```
 
-## Websites Using Lanyrd-Scraper
+## Websites using lanyrd-scraper
 
 * [MelbJS](http://melbjs.com) ([Source](https://github.com/melbjs/melbjs))
 
