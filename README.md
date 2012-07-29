@@ -22,8 +22,6 @@ lanyrd.scrape('http://www.lanyrd.com/2012/web-directions-code', function(err, ev
 });
 ```
 
-### Shorthand URL
-
 The event URL can be optionally be provided in a shorthand format:
 
 ```javascript
