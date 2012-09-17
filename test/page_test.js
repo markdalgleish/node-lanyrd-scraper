@@ -1,5 +1,6 @@
 var Page = require('../lib/page'),
-	cheerio = require('cheerio');
+	cheerio = require('cheerio'),
+	$ = cheerio.load();
 
 var TRIMMED_TEXT = 'Trimmed text',
 	getTextpage = new Page('<div><div id="blank-text">   </div><div id="text"> ' + TRIMMED_TEXT + ' </div></div>');
@@ -68,6 +69,19 @@ exports['getHashTag'] = {
 	'returns the hash tag': function(test) {
 		test.expect(1);
 		test.equal(getHashTagpage.getHashtag('#hashtag'), HASHTAG);
+		test.done();
+	}
+};
+
+var mapPage = new Page('<b>foo</b><b>foo</b><b>foo</b>');
+exports['map'] = {
+	'returns an array': function(test) {
+		var expected = mapPage.map('b', function(elem){
+			return $(elem).text();
+		});
+		test.expect(2);
+		test.equal(expected.length, 3);
+		test.equal(expected[0], 'foo');
 		test.done();
 	}
 };
