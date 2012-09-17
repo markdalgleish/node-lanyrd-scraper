@@ -1,19 +1,6 @@
 var parse = require('../../lib/parsers/event'),
-	express = require('express'),
-	request = require('request'),
+	fs = require('fs'),
 	path = require('path');
-
-var app = express.createServer();
-var PORT = 8535;
-
-app.configure(function(){
-	app.use(express.methodOverride());
-	app.use(express.bodyParser());
-	app.use(app.router);
-	app.use(express['static'](path.join(__dirname, '..', '/mock-pages')));
-});
-
-app.listen(PORT);
 
 var multiDayEventData;
 exports['multi-day event'] = {
@@ -23,9 +10,9 @@ exports['multi-day event'] = {
 			return;
 		}
 
-		request('http://localhost:' + PORT + '/multi-day-event.html', function(err, res, body){
-			parse(body, function(err, data) {
-				multiDayEventData = data;
+		fs.readFile(path.join(__dirname, 'event/multi-day-event.html'), 'utf-8', function(err, data){
+			parse(data, function(err, eventData) {
+				multiDayEventData = eventData;
 				done();
 			});
 		});
