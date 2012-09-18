@@ -28,7 +28,9 @@ exports['shortenUrl'] = {
 
 exports['resolvePageType'] = {
 	'returns the correct page type': function(test) {
-		test.equals(resolver.resolvePageType('/foobar', { foo: /foo/ } ), 'foo');
+		test.equals(resolver.resolvePageType('2012/melbjs-september'), 'event');
+		test.equals(resolver.resolvePageType('series/melbjs'), 'series');
+		test.equals(resolver.resolvePageType('foobar', { foo: /foo/ } ), 'foo');
 		test.done();
 	}
 };
