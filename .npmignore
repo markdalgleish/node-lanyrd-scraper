@@ -2,8 +2,6 @@
 .git*
 test
 grunt.js
-README.md
-LICENSE-MIT
 .travis.yml
 example.js
 .DS_Store
