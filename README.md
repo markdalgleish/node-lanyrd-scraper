@@ -10,25 +10,44 @@ They don't have an API (yet).
 
 Install the module with: `npm install lanyrd-scraper`
 
-## Scraping Event Data
+## Basic Usage
 
-The `scrape` function accepts an event URL and a callback:
+The `scrape` function accepts an event or series URL and a callback.
 
-```javascript
+The examples below use the shorthand URL format:
+
+``` js
 var lanyrd = require('lanyrd-scraper');
 
-lanyrd.scrape('http://www.lanyrd.com/2012/web-directions-code', function(err, event){
+lanyrd.scrape('2012/web-directions-code', function(err, event){
   console.log(event); // Object containing event data
 });
-```
 
-The event URL can be optionally be provided in a shorthand format:
-
-```javascript
-lanyrd.scrape('2012/web-directions-code', function(err, event){
-  console.log(event);
+lanyrd.scrape('series/melbjs', function(err, series){
+  console.log(series); // Object containing series data
 });
 ```
+
+## Advanced Usage
+
+If you want more control than the basic `scrape` function, the parsing functions it uses internally are exposed to you via the `parse` object.
+
+You can parse markup with the following functions:
+
+``` js
+var lanyrd = require('lanyrd-scraper');
+
+lanyrd.parse.event(markup, function(err, event) {
+  console.log(event); // Object containing event data
+});
+
+lanyrd.parse.series(markup, function(err, series) {
+  console.log(series); // Object containing series data
+});
+```
+
+Using this method, you are free to load the markup however you wish.
+
 ### Event Data
 
 The following properties are available on the returned `event` object:
@@ -76,6 +95,24 @@ The following properties are available on the returned `event` object:
     {
       'name': String,
       'twitterHandle': String
+    }
+  ]
+}
+```
+
+### Series Data
+
+The following properties are available on the returned `series` object:
+
+```javascript
+{
+  'title': String,
+  'events': [
+    {
+      'title': String,
+      'url': String,
+      'date': String,
+      'time': String
     }
   ]
 }
