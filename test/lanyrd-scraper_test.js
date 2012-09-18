@@ -5,9 +5,8 @@ exports['public API'] = {
 		test.equals(typeof lanyrd.scrape, 'function');
 		test.done();
 	},
-	'has "parse" object containing parse functions': function(test) {
+	'has "parse" object': function(test) {
 		test.equals(typeof lanyrd.parse, 'object');
-		test.equals(typeof lanyrd.parse.event, 'function');
 		test.done();
 	}
 };
