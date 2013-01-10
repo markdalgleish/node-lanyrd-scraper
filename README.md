@@ -1,10 +1,9 @@
-# lanyrd-scraper [![Build Status](https://secure.travis-ci.org/markdalgleish/node-lanyrd-scraper.png)](http://travis-ci.org/markdalgleish/node-lanyrd-scraper)
+[![Build Status](https://secure.travis-ci.org/markdalgleish/node-lanyrd-scraper.png)](http://travis-ci.org/markdalgleish/node-lanyrd-scraper)
+# lanyrd-scraper
 
-[Lanyrd](http://lanyrd.com) event scraper for Node.js.
+### [Lanyrd](http://lanyrd.com) event scraper for Node.js.
 
-### Why a Scraper?
-
-They don't have an API (yet).
+Why a Scraper? They don't have an API (yet).
 
 ## Setup
 
@@ -132,5 +131,5 @@ Lint your code with `grunt lint` and run tests with `grunt test`
 All code is linted and tested automatically once pushed using [Travis CI](http://travis-ci.org/markdalgleish/node-lanyrd-scraper).
 
 ## License
-Copyright (c) 2012 Mark Dalgleish  
+Copyright (c) 2013 Mark Dalgleish  
 Licensed under the MIT license.
