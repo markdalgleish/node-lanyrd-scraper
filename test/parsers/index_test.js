@@ -1,3 +1,5 @@
+'use strict';
+
 var parsers = require('../../lib/parsers');
 
 exports['public API'] = {

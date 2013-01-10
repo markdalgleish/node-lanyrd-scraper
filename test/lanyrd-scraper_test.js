@@ -1,3 +1,5 @@
+'use strict';
+
 var lanyrd = require('../lib/lanyrd-scraper');
 
 exports['public API'] = {

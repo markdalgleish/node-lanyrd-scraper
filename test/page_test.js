@@ -1,3 +1,5 @@
+'use strict';
+
 var Page = require('../lib/page'),
 	cheerio = require('cheerio'),
 	$ = cheerio.load();

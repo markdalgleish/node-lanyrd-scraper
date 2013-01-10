@@ -1,3 +1,5 @@
+'use strict';
+
 var parse = require('../../lib/parsers/series'),
 	fs = require('fs'),
 	path = require('path');

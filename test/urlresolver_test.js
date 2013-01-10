@@ -1,3 +1,5 @@
+'use strict';
+
 var resolver = require('../lib/urlresolver');
 
 exports['resolveUrl'] = {

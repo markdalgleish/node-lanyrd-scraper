@@ -1,3 +1,5 @@
+'use strict';
+
 var parse = require('../../lib/parsers/event'),
 	fs = require('fs'),
 	path = require('path');
