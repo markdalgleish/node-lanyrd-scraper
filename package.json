@@ -1,7 +1,7 @@
 {
   "name": "lanyrd-scraper",
   "description": "Scraper for Lanyrd events",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Mark Dalgleish",
     "url": "http://markdalgleish.com"
